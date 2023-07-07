@@ -1,9 +1,9 @@
 {
-    "name": "MDisk Unlimited Link Convertor Bot",
+    "name": "TU Unlimited Link Convertor Bot",
     "description": "High Speed ⚡",
     "keywords": [
         "telegram",
-        "MDisk",
+        "TU_TOKEN",
         "shortner"
     ],
     "website": "https://github.com/CyniteOfficial/Mdisk-Link-Converter-Bot",
@@ -26,8 +26,8 @@
             "value": "eg. JOIN MY CHANNEL"
         },
         "MDISK_TOKEN": {
-            "description": "Put your MDisk API key here",
-            "value": "Qu7jX9V0Sn3q1JHdxjPp"
+            "description": "Put your TU API key here",
+            "value": "a51f9343387ae049a5fd8d8e418aa35f20bc459e"
         }
     },
     "addons": [],
