@@ -16,7 +16,7 @@ API_ID = environ.get('API_ID')
 API_HASH = environ.get('API_HASH')
 BOT_TOKEN = environ.get('BOT_TOKEN')
 CHANNEL = environ.get('CUSTOM_FOOTER')
-MDISK_TOKEN = environ.get('MDISK_TOKEN')
+TU_TOKEN = environ.get('TU_TOKEN')
 bot = Client('Doodstream bot',
              api_id=API_ID,
              api_hash=API_HASH,
@@ -29,12 +29,12 @@ bot = Client('Doodstream bot',
 async def start(bot, message):
     await message.reply(
         f"**Hi, {message.chat.first_name} !!**\n\n"
-        "**I am your Personal MDisk Link Converter Bot 🤗, Made by @TechnicalCynite💞 Send me a MDisk Post to see the Magic 😅**")
+        "**I am your Personal Tu Link Converter Bot 🤗, Made by @harrypotter00009💞 Send me any Post to see the Magic 😅**")
     
 @bot.on_message(filters.text & filters.private)
 async def Doodstream_uploader(bot, message):
     new_string = str(message.text)
-    conv = await message.reply("Wait Bnaraha Hu Tab Tak @TechnicalCynite Check Karo✋")
+    conv = await message.reply("Wait Bnaraha Hu Tab Tak @ajbackupp Check Karo✋")
     dele = conv["message_id"]
     try:
         Doodstream_link = await multi_Doodstream_up(new_string)
@@ -47,7 +47,7 @@ async def Doodstream_uploader(bot, message):
 @bot.on_message(filters.photo & filters.private)
 async def Doodstream_uploader(bot, message):
     new_string = str(message.caption)
-    conv = await message.reply("Wait Bnaraha Hu Tab Tak @TechnicalCynite Check Karo✋")
+    conv = await message.reply("Wait Bnaraha Hu Tab Tak @ajbackupp Check Karo✋")
     dele = conv["message_id"]
     try:
         Doodstream_link = await multi_Doodstream_up(new_string)
@@ -107,7 +107,7 @@ async def Doodstream_up(link):
     title_new = os.path.basename(title_new.path)
     title_Doodstream = '@' + CHANNEL + title_new
     realaurl = 'https://diskuploader.mypowerdisk.com/v1/tp/cp'
-    param = {'token':f'{MDISK_TOKEN}','link':link}
+    param = {'token':f'{TU_TOKEN}','link':link}
     res = requests.post(realaurl, json = param)         
     data = res.json()
     data = dict(data)
